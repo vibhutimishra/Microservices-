@@ -1,0 +1,6 @@
+{
+  "ID": "inventory",
+  "Name": "inventory",
+  "Address": "localhost",
+  "Port": 5001
+}
