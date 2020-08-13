@@ -1,0 +1,23 @@
+{{range services}}
+upstream {{.Name}} {
+  least_conn;
+  {{range service .Name}}
+  server {{.Address}}:{{.Port}};
+  {{end}}
+}
+{{end}}
+
+server {
+  listen 80 default_server;
+
+  location / {
+    root /usr/share/nginx/html/;
+    index index.html;
+  }
+
+  {{range services}}
+  location /service/{{.Name}}/ {
+    proxy_pass http://{{.Name}}/;
+  }
+  {{end}}
+}

@@ -1,0 +1,6 @@
+{
+    "ID": "monitor-1",
+    "Name": "monitor",
+    "Port": 5000,
+    "tags":["tag"]
+  }

@@ -1,0 +1,6 @@
+{
+    "ID": "inventory-1",
+    "Name": "inventory",
+    "Port": 5001,
+    "tags":["tag"]
+  }
